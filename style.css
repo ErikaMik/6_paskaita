@@ -1,0 +1,13 @@
+#result {
+	font-size: 60px;
+}
+body {
+	background-color: gray;
+}
+#header {
+	padding: 5px;
+}
+
+.block {
+	border: solid 2px;
+}
