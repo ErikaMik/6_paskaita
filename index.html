@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Calc</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="row">
@@ -18,15 +18,21 @@
 				<input id="number_b" type="text" name="" class="form-control mb-2" placeholder="Number B">
 			</div>
 			<div class="col">
-				<button class="btn btn-dark btn-block" onclick="sum();">Add</button>
-				<button class="btn btn-dark btn-block" onclick="div();">Dalyba</button>
-				<button class="btn btn-warning btn-block" onclick="empty();">Clear</button>
+				<button id="btn_sum" class="btn btn-dark btn-block">Add</button>
+				<button class="btn btn-dark btn-block">Dalyba</button>
+				<button id="btn_empty" class="btn btn-warning btn-block">Clear</button>
 			</div>
 			<div class="col block text-center" id="result">
 				x
 			</div>
 		</div>
+		<div class="row">
+			<div class="col" id="history">No history</div>
+		</div>
 	</div>
-		<script src="app.js"></script>
+	<script src="app.js"></script>
 </body>
+<!-- onclick="sum(); -->
+<!-- onclick="div(); -->
+<!-- onclick="empty();" -->
 </html>

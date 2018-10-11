@@ -14,6 +14,18 @@ var input_a = document.getElementById('number_a');
 var input_b = document.getElementById('number_b');
 var result = document.getElementById('result');
 
+var btn_sum = document.getElementById('btn_sum');
+var btn_empty = document.getElementById('btn_empty');
+
+
+
+btn_sum.addEventListener('click', sum);
+btn_empty.addEventListener('click', empty);
+
+// input_a.addEventListener('keyup', sum);
+
+var results = [];
+
 function sum() {
 	var a = parseInt(input_a.value); //parseInt funkcija grazina skaiciu
 	var b = parseInt(input_b.value);
@@ -29,6 +41,10 @@ function sum() {
 			result.innerHTML = sum + '<br><small>(EUR: ' + eur + ")</small>";
 			input_a.style.color = 'black';
 			input_b.style.color = 'black';
+
+			// results.push(sum);
+			store(sum);
+			console.log(results);
 		}
 }
 
@@ -68,3 +84,11 @@ function convert_to_eur(amount) {
 // 			input_b.style.color = 'black';
 // 		}
 
+function store(current_result) {
+	
+	results.push(current_result);
+	console.log(results);
+
+	var history = document.getElementById('history');
+	history.innerHTML = results.join(', ');
+}
